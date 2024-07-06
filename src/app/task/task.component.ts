@@ -52,5 +52,4 @@ this.taskService.addTasks(tasks,this.userId!)
 this.isAddingTask = false;
 
 }
-
 }
