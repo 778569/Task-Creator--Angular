@@ -1,26 +1,30 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { User } from './user.model';
+import { CardComponent } from "../shared/card/card.component";
 
 
 
 @Component({
-  selector: 'app-user',
-  standalone: true,
-  imports: [],
-  templateUrl: './user.component.html',
-  styleUrl: './user.component.css'
+    selector: 'app-user',
+    standalone: true,
+    templateUrl: './user.component.html',
+    styleUrl: './user.component.css',
+    imports: [CardComponent]
 })
+
+
 export class UserComponent {
 
-  @Input({required: true}) avater! : string;
-  @Input({required: true}) name! : string;
-  @Input({required: true}) id! : string;
 
+  @Input({required: true}) User! : User;
   @Output() select = new EventEmitter<string>();
 
+  @Input() selected! : boolean;
+
   get imagePath(){
-    return 'assets/users/' + this.avater
+    return 'assets/users/' + this.User.avatar
   }
   onSelectUser(){
-    this.select.emit(this.id)
+    this.select.emit(this.User.id)
   }
 }
