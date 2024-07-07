@@ -4,8 +4,6 @@ import { NewTask } from '../todotask/tototask.model';
 
 @Component({
   selector: 'app-new-todotask',
-  standalone: true,
-  imports: [FormsModule],
   templateUrl: './new-todotask.component.html',
   styleUrl: './new-todotask.component.css'
 })

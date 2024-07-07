@@ -6,11 +6,10 @@ import { DatePipe } from '@angular/common';
 
 
 @Component({
-    selector: 'app-todotask',
-    standalone: true,
+    selector: 'app-todotask', 
     templateUrl: './todotask.component.html',
     styleUrl: './todotask.component.css',
-    imports: [CardComponent, DatePipe]
+   
 })
 export class TodotaskComponent {
 
